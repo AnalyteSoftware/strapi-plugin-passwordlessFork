@@ -159,7 +159,7 @@ module.exports = (
 
     async fetchUser(data) {
       const userSchema = strapi.getModel('plugin::users-permissions.user');
-      const user = await strapi.query('plugin::users-permissions.user').findOne({where: data, populate: ['role','artist_notifications]})
+      const user = await strapi.query('plugin::users-permissions.user').findOne({where: data, populate: ['role','artist_notifications']})
       if (!user) {
         return user;
       }
